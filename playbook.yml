@@ -1,0 +1,15 @@
+- name: Run reproducer without static
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - include_role:
+        name: reproducer
+
+- name: Run reproducer with static
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - include_role:
+        name: reproducer
+      static: no
+
